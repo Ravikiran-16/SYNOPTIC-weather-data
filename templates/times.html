@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Observations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+
+    <h1>Available Observations</h1>
+
+    {% for row in rows %}
+
+    <p class="info">
+        {{ "%02d"|format(row[0]) }}:
+        {{ "%02d"|format(row[1]) }}
+
+        <a
+        class="view-btn"
+        href="/observation?date={{date}}&hour={{row[0]}}">
+        View
+        </a>
+    </p>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SYNOPTIC Weather Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>SYNOPTIC Weather Data</h1>
+
+    <form action="/search" method="POST">
+
+        <label>Select Date</label>
+
+        <input
+            type="date"
+            name="date"
+            min="2000-01-01"
+            max="2025-12-31"
+            required
+        >
+
+        <button type="submit">Search</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

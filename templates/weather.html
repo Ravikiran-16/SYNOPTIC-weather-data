@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+
+    <h1>SYNOPTIC Data Report</h1>
+
+    <p class="info"><b>Station:</b> {{ data.station }}</p>
+    <p class="info"><b>Date:</b> {{ data.date }}</p>
+    <p class="info"><b>Time:</b> {{ data.time }}</p>
+    <p class="info"><b>Visibility:</b> {{ data.visibility }}</p>
+    <p class="info"><b>Wind:</b> {{ data.wind }}</p>
+    <p class="info"><b>Temperature:</b> {{ data.temperature }}</p>
+    <p class="info"><b>Dew Point:</b> {{ data.dew_point }}</p>
+    <p class="info"><b>Station Pressure:</b> {{ data.station_pressure }}</p>
+    <p class="info"><b>Sea Level Pressure:</b> {{ data.sea_level_pressure }}</p>
+
+    <br>
+
+    <a class="view-btn" href="/">Back</a>
+
+</div>
+
+</body>
+</html>
